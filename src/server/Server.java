@@ -14,9 +14,8 @@ public class Server {
 
 	public static void main(String[] args) {
 		int port = 5000;
-		serverSocket = null;
 		try {
-			serverSocket = new ServerSocket(port);
+			ServerSocket serverSocket = new ServerSocket(port);
 			while (true) {
 				Socket socket = serverSocket.accept();
 				DataInputStream in = new DataInputStream(socket.getInputStream());
